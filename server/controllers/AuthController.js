@@ -21,6 +21,7 @@ export const signup = async (req, res, next) => {
         // secure: true,
         // sameSite: "None",
       });
+      await user.save();
 
       return res.status(201).json({
         user: {
